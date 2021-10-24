@@ -1,0 +1,17 @@
+#qui étudie quoi=> est une table de jointure
+@prefix ab: <http://learningsparql.com/ns/storebook#>.
+@prefix d: <http://learningsparql.com/ns/data#>.
+
+#richard étudie le mathématiques ainsi que le physique
+d:i01 ab:takingCourse d:course1.
+d:i01 ab:takingCourse d:course2.
+
+#cindy étudie que le mécanique
+d:i02 ab:takingCourse d:course4.
+
+#craig étudie tout les matieres
+d:i03 ab:takingCourse d:course1.
+d:i03 ab:takingCourse d:course2.
+d:i03 ab:takingCourse d:course3.
+d:i03 ab:takingCourse d:course4.
+
