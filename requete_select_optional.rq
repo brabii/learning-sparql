@@ -1,5 +1,17 @@
 PREFIX ab: <http://learningsparql.com/ns/storebook#>
 PREFIX d: <http://learningsparql.com/ns/data#>
+#5 une requette qui permet de selectionner seulement les individus qui ont un nickame
+
+##### comme on dit SELECT firstname, lastname,nick FROM table WHERE nick != null or exists
+SELECT ?firstname ?lastname ?nick
+WHERE{
+	?s  ab:firstname ?firstname;
+		ab:lastname ?lastname;
+		ab:nick ?nick;
+		EXISTS{
+			?s ab:nick ?nick
+		}
+}
 
 #4 une requette qui permet de selectionner seulement les individus qui ont worktel
 
@@ -12,7 +24,7 @@ WHERE{
 	}
 } 
 
-#3 une requette qui permet de selectionner les individus qui n'ont pas worktel 
+#3 une requette qui permet de selectionner les individus qui nont pas worktel 
 
 SELECT ?firstname ?lastname
 WHERE{
@@ -21,7 +33,7 @@ WHERE{
 	  NOT EXISTS { ?s ab:workTel ?workTel }
 }
 
-# 2 une requette qui permet de selectionner firstname , lastname et nickame(s'il existe) 
+# 2 une requette qui permet de selectionner firstname , lastname et nickame(sil existe) 
 
 SELECT ?firstname ?lastname ?nickame
 WHERE{
@@ -32,7 +44,7 @@ WHERE{
 	}
 }
 
-#1 une requette qui permet de selectionner firstname , lastname et workTel(s'il exist) 
+#1 une requette qui permet de selectionner firstname , lastname et workTel(s''il exist) 
 
 SELECT ?firstname ?lastname ?workTel
 WHERE{
