@@ -1,5 +1,17 @@
 PREFIX ab: <http://learningsparql.com/ns/storebook#>.
 PREFIX d: <http://learningsparql.com/ns/data#>.
+#3 une requette qui permet d''afficher les personnes 
+# qui ont inscrit au course1 et course2 {dans notre exemple
+#ça sera richard et craig}
+
+SELECT ?firstname ?lastname
+WHERE{
+	?s 	ab:takingCourse d:course1;
+    	ab:takingCourse d:course2;
+     	ab:firstname ?firstname;
+      	ab:lastname ?lastname.
+}
+
 #2 une requette qui permet d''afficher les cours de cindy
 
 SELECT ?courseName
