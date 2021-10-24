@@ -1,6 +1,19 @@
 PREFIX ab: <http://learningsparql.com/ns/storebook#>
 PREFIX d: <http://learningsparql.com/ns/data#>
-#1 une requette qui permet de selectionner les individus qui n'ont pas worktel 
+
+#4 une requette qui permet de selectionner seulement les individus qui ont worktel
+
+SELECT ?firstname ?lastname
+WHERE{
+	?s ab:firstname ?firstname;
+	   ab:lastname ?lastname
+	EXISTS{
+		?s ab:workTel ?workTel
+	}
+} 
+
+#3 une requette qui permet de selectionner les individus qui n'ont pas worktel 
+
 SELECT ?firstname ?lastname
 WHERE{
 	?s ab:firstname ?firstname ;
