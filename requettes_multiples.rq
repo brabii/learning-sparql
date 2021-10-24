@@ -1,0 +1,11 @@
+#je veux afficher les cours de craig
+PREFIX ab: <http://learningsparql.com/ns/storebook#>.
+PREFIX d: <http://learningsparql.com/ns/data#>.
+
+SELECT ?courseName
+WHERE{
+		?s 	ab:firstname "craig";
+			ab:takingCourse ?course
+
+		?course ab:courseTitle ?courseName
+	}

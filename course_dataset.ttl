@@ -4,5 +4,5 @@
 
 d:course1 ab:courseTitle "mathématiques".
 d:course2 ab:courseTitle "physique".
-d:course3 ab:courseTitle "géomterie'.
+d:course3 ab:courseTitle "geometrie".
 d:course4 ab:courseTitle "mecanique".
