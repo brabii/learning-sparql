@@ -11,3 +11,14 @@ WHERE{
 		?s ab:workTel ?workTel
 	}
 }
+
+#une requette qui permet de selectionner firstname , lastname et nickame(s'il existe) 
+
+SELECT ?firstname ?lastname ?nickame
+WHERE{
+	?s  ab:firstname ?firstname ;
+		ab:lastname ?lastname .
+	OPTIONAL{
+		?s ab:nick ?nickame
+	}
+}
