@@ -1,0 +1,15 @@
+#people dataset
+@prefix ab: <http://learningsparql.com/ns/storebook#>.
+@prefix d: <http://learningsparql.com/ns/data#>.
+
+d:i01 ab:firstname "richard";
+	  ab:lastname "lastname of richard";
+	  ab:email "richard@email.com".
+	  
+d:i02 ab:firstname "cindy";
+      ab:lastname "lastname of cindy";
+	  ab:email "cindy@email.com".
+
+d:i03	ab:firstname "craig";
+		ab:lastname "lastname of craig";
+		ab:email "craig@email.com".
