@@ -1,6 +1,16 @@
-#je veux afficher les cours de craig
 PREFIX ab: <http://learningsparql.com/ns/storebook#>.
 PREFIX d: <http://learningsparql.com/ns/data#>.
+#2 une requette qui permet d''afficher les cours de cindy
+
+SELECT ?courseName
+WHERE{
+	?s 	ab:firstname "cindy";
+		ab:takingCourse ?course.
+		
+		?course ab:courseTitle ?courseName.
+}
+
+#1 je veux afficher les cours de craig
 
 SELECT ?courseName
 WHERE{
