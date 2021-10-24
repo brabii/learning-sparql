@@ -1,0 +1,13 @@
+#une requette qui permet de selectionner firstname , lastname et workTel(s'il exist) 
+
+PREFIX ab: <http://learningsparql.com/ns/storebook#>
+PREFIX d: <http://learningsparql.com/ns/data#>
+
+SELECT ?firstname ?lastname ?workTel
+WHERE{
+	?s  ab:firstname ?firstname ;
+		ab:lastname ?lastname .
+	OPTIONAL{
+		?s ab:workTel ?workTel
+	}
+}
