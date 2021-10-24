@@ -1,0 +1,21 @@
+@prefix ab: <http://learningsparql.com/ns/storebook#> .
+@prefix d: <http://learningsparql.com/ns/data#> .
+
+d:i01 ab:firstname "richard" .
+d:i01 ab:lastname "lastname of richard" .
+d:i01 ab:homeTel "0000000" .
+d:i01 ab:email "richard@email.com" .
+
+
+d:i02 ab:firstname "cindy" .
+d:i02 ab:lastname "lastname of cindy" .
+d:i02 ab:email "cindy@email.com" .
+d:i02 ab:nick "cindyNickname" .
+d:i02 ab:homeTel "111111111" .
+
+
+d:i03 ab:firstname "craig" .
+d:i03 ab:lastname "lastname of craig" .
+d:i03 ab:workTel "3333333333 work tel" .
+d:i03 ab:email "firstEmailOfCraig@email.com" .
+d:i03 ab:email "secondEmailOfCraig@email.com" .
