@@ -1,7 +1,25 @@
-#une requette qui permet de selectionner firstname , lastname et workTel(s'il exist) 
-
 PREFIX ab: <http://learningsparql.com/ns/storebook#>
 PREFIX d: <http://learningsparql.com/ns/data#>
+#1 une requette qui permet de selectionner les individus qui n'ont pas worktel 
+SELECT ?firstname ?lastname
+WHERE{
+	?s ab:firstname ?firstname ;
+       ab:lastname ?lastname .
+	  NOT EXISTS { ?s ab:workTel ?workTel }
+}
+
+# 2 une requette qui permet de selectionner firstname , lastname et nickame(s'il existe) 
+
+SELECT ?firstname ?lastname ?nickame
+WHERE{
+	?s  ab:firstname ?firstname ;
+		ab:lastname ?lastname .
+	OPTIONAL{
+		?s ab:nick ?nickame
+	}
+}
+
+#1 une requette qui permet de selectionner firstname , lastname et workTel(s'il exist) 
 
 SELECT ?firstname ?lastname ?workTel
 WHERE{
@@ -12,13 +30,3 @@ WHERE{
 	}
 }
 
-#une requette qui permet de selectionner firstname , lastname et nickame(s'il existe) 
-
-SELECT ?firstname ?lastname ?nickame
-WHERE{
-	?s  ab:firstname ?firstname ;
-		ab:lastname ?lastname .
-	OPTIONAL{
-		?s ab:nick ?nickame
-	}
-}
